@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning the DOM</title>
+    <!-- JS inclusion -->
+    <script src="3-DOM-change-elements.js" defer></script>
+    <!-- CSS inclusion -->
+    <link rel="stylesheet" type="text/css" href="3-DOM-change-elements.css" media="all" />
+  </head>
+
+  <body>
+    <!-- 
+      - How To Make Changes to the DOM
+        - https://www.digitalocean.com/community/tutorials/how-to-make-changes-to-the-dom
+        - How to create new nodes and insert them into the DOM, replace existing nodes, and remove nodes.
+        - Creating New Nodes
+            Property/Method 				Description
+              createElement() 				Create a new element node
+              createTextNode() 				Create a new text node
+              node.textContent 				Get or set the text content of an element node
+              node.innerHTML 					Get or set the HTML content of an element
+        - Inserting Nodes into the DOM
+            Property/Method 				Description
+              node.appendChild() 			Add a node as the last child of a parent element
+              node.insertBefore() 		Insert a node into the parent element before a specified sibling node
+              node.replaceChild() 		Replace an existing node with a new node
+        - Removing Nodes from the DOM
+            Method 									Description
+              node.removeChild() 			Remove child node
+              node.remove() 					Remove node		
+    -->
+    <h1>Document Object Model</h1>
+    <ul>
+      <li>Buy groceries</li>
+      <li>Feed the cat</li>
+      <li>Do laundry</li>
+    </ul>
+  </body>
+
+</html>

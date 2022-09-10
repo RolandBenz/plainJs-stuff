@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning About Nodes</title>
+
+  <style>
+    * { border: 2px solid #dedede; padding: 15px; margin: 15px; }
+    html { margin: 0; padding: 0; }
+    body { max-width: 600px; font-family: sans-serif; color: #333; }
+  </style>
+</head>
+
+<body>
+  <!--
+    - How To Traverse the DOM
+      - https://www.digitalocean.com/community/tutorials/how-to-traverse-the-dom
+      - The document object is the root of every node in the DOM. 
+        This object is actually a property of the window object, which is the global, 
+        top-level object representing a tab in the browser. 
+        The window object has access to such information as the toolbar, 
+        height and width of the window, prompts, and alerts. 
+        The document consists of what is inside of the inner window.
+      - Console 
+          - Enter 'document' into the console and you see all the properties you can access
+            with the dot notation e.g. document.all shows a collection of all element tags.
+          - You can access an item of a collection with item() or [].
+          - You can also access variables and constants of a script which run with the html 
+          >> document
+          >> document.all
+          >> document.all.item(8).parentNode
+          >> document.all.item(11).firstElementChild.style.background = 'yellow';
+          >> document.body.children[3].lastElementChild.style.background = 'fuchsia';
+      - Properties used to traverse the Dom
+          Property 											Node 						Node Type
+            document 											#document 			DOCUMENT_NODE
+            document.documentElement 			html 						ELEMENT_NODE
+            document.head 								head 						ELEMENT_NODE
+            document.body 								body 						ELEMENT_NODE
+          Property 									Gets
+            parentNode 								Parent Node
+            parentElement 						Parent Element Node
+          Property 									Gets
+            childNodes 								Child Nodes (with the indentation between elements in html file)
+            firstChild 								First Child Node
+            lastChild 								Last Child Node
+            children 									Element Child Nodes (without the indentation between elements in html file)
+            firstElementChild 				First Child Element Node
+            lastElementChild 					Last Child Element Node
+          Property 									Gets
+            previousSibling 					Previous Sibling Node
+            nextSibling 							Next Sibling Node
+            previousElementSibling 		Previous Sibling Element Node
+            nextElementSibling 				Next Sibling Element Node
+  -->
+  <h1>Shark World</h1>
+  <p>The world's leading source on <strong>shark</strong> related information.</p>
+  <h2>Types of Sharks</h2>
+  <ul>
+    <li>Hammerhead</li>
+    <li>Tiger</li>
+    <li>Great White</li>
+  </ul>
+</body>
+
+<script>
+  /*  
+    - Enter 'document' into the console and you see all the properties you can access
+      with the dot notation e.g. document.all shows a collection of all element tags.
+    - You can access an item of a collection with item() or [].
+    - You can also access variables and constants of a script which run with the html 
+  */
+  const h1 = document.getElementsByTagName('h1')[0];
+  const p = document.getElementsByTagName('p')[0];
+  const ul = document.getElementsByTagName('ul')[0];
+  document.all.item(11).firstElementChild.style.background = 'yellow';
+	document.body.children[3].lastElementChild.style.background = 'fuchsia';
+  ul.children[0].nextElementSibling.style.background = 'coral';
+</script>
+
+</html>

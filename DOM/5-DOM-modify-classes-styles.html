@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Learning the DOM</title>
+  <!-- JS inclusion -->
+  <script src="5-DOM-modify-classes-styles.js" defer></script>
+  <!-- CSS inclusion -->
+  <link rel="stylesheet" type="text/css" href="5-DOM-modify-classes-styles.css" media="all" />
+  <style  id="demo">
+    .demo {
+      padding: 10px 20px;
+      margin-bottom: 20px;
+      font-size: 3em;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+    }
+    body {
+      font-family: arial;
+      padding: 1em;
+    }
+    .new-class-4{
+      margin-top: 20px;
+      background: rgb(0, 255, 153);
+    }
+    .element-5 {
+      margin-top: 20px;
+      background: rgb(255, 191, 0);
+      color: white;
+      padding: 10px 20px;
+      margin-bottom: 20px;
+    }
+    .demo-7{
+      margin-top: 20px;
+      background-color: yellow !important;
+  }
+  </style>
+</head>
+
+<body>
+  <!-- 
+
+  -->
+
+  <div class="demo demo-1">Hello</div>
+  <button id="button-1" class="add styled" type="button">Change CSS style</button>
+
+  <div class="demo demo-2" style="color: red;">Hello</div>
+  <button id="button-2" class="add styled" type="button">Change CSS style</button>
+
+  <div class="demo demo-3">Hello</div>
+  <button id="button-3" class="add styled" type="button">Change CSS style</button>
+
+  <div class="demo demo-4">Hello</div>
+  <button id="button-4-1" class="add styled" type="button">Add Class</button>
+  <button id="button-4-2" class="remove styled" type="button">Remove Class</button>
+  <button id="button-4-3" class="toggle styled" type="button">Toggle Class</button>
+
+  <div class="demo element-5">Hello</div>
+  <button id="button-5" class="add styled" type="button">Change CSS style</button>
+
+  <div class="demo demo-6">Hello</div>
+  <button id="button-6" class="add styled" type="button">Append Stylesheet</button>
+
+  <div class="demo demo-7">Hello</div>
+  <button id="button-7" class="add styled" type="button">Overwrite Important Style</button>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Learning the DOM</title>
+  <!-- JS inclusion -->
+  <script src="4-DOM-modify-attributes-classes-styles.js" defer></script>
+  <style>
+    body {
+      max-width: 600px;
+      margin: 0 auto;
+      font-family: sans-serif;
+    }
+    .active {
+      border: 2px solid blue;
+    }
+    .warning {
+      border: 2px solid red;
+    }
+    .hidden {
+      display: none;
+    }
+    div {
+      border: 2px dashed lightgray;
+      padding: 15px;
+      margin: 5px;
+    }
+    img {
+      width: 50%;
+      height: 50%;
+      border: 1px solid black
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+  - How To Modify Attributes, Classes, and Styles in the DOM
+		- Modifying Attributes
+				Method 								Description 																					Example
+					hasAttribute() 				Returns a true or false boolean 											element.hasAttribute('href');
+					getAttribute() 				Returns the value of a specified attribute or null 		element.getAttribute('href');
+					setAttribute() 				Adds or updates value of a specified attribute 				element.setAttribute('href', 'index.html');
+					removeAttribute() 		Removes an attribute from an element 									element.removeAttribute('href');
+		- Modifying Classes
+				Method/Property 			Description 														Example
+					className 						Gets or sets class value 								element.className;
+					classList.add() 			Adds one or more class values 					element.classList.add('active');
+					classList.toggle() 		Toggles a class on or off 							element.classList.toggle('active');
+					classList.contains() 	Checks if class value exists 						element.classList.contains('active');
+					classList.replace() 	Replace existing with new class value 	element.classList.replace('old', 'new');
+					classList.remove() 		Remove a class value 										element.classList.remove('active');
+		- Modifying Styles
+			- The style property represents the inline styles on an HTML element.
+					element.style.cssProperty = 'value'
+					div.setAttribute('style', 'cssProperty: value', 'css-property: value');
+			- How To Change CSS With JavaScript [With Examples] 
+				- https://alvarotrigo.com/blog/change-css-javascript/
+  -->
+
+  <div>Div 1</div>
+  <div class="active">Div 2</div>
+
+  <div id="stylediv" style="height: 100px; width: 100px; border: 2px solid black;">Div</div>
+
+  <img src="https://assets.digitalocean.com/articles/eng_javascript/dom/attributes-shark.png" alt="Image">
+  <img src="https://assets.digitalocean.com/articles/eng_javascript/dom/attributes-shark.png" alt="Image">
+  <a id="jumpi" href="image.jpeg" target="_parent">
+    <img src="image.jpeg" alt="Image">
+  </a>
+
+</body>
+
+</html>
