@@ -1,0 +1,6 @@
+{
+  "users": [
+    {"name": "RolandBenz", "isAdmin": true},
+    {"name": "iliakan", "isAdmin": true}
+  ]
+}
